@@ -63,16 +63,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         })
     }
     func filterAndRefreshMap (name:[String?], value:[Feature_2]) {
-        print(name)
-        print(value)
+        //print(name)
+        //print(value)
         var iteration:Int = 0
         name.forEach { row in
             
             let arret:String? = name[iteration]
             let arretSolo = value.filter { $0.properties.CODE == arret }
             
-            var latitude = arretSolo[0].geometry.coordinates[1]
-            var longitude = arretSolo[0].geometry.coordinates[0]
+            let latitude = arretSolo[0].geometry.coordinates[1]
+            let longitude = arretSolo[0].geometry.coordinates[0]
             
             // instantiation de l'annotation
             
@@ -80,14 +80,38 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotation.id = arret
             annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             annotation.title = arret
+            
+            
             mapView.addAnnotation(annotation)
             
             iteration = iteration + 1
             print(arretSolo)
         }
-        
-        
+    
     }
+    
+    // Test de l'annotation, pour pouvoir ensuite faire en sorte d'afficher quelque chose en cas de touch
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is CustomAnnotation {
+            let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: String(annotation.hash))
+
+            let rightButton = UIButton(type: .infoDark)
+            rightButton.tag = annotation.hash
+            
+
+            pinView.animatesDrop = true
+            pinView.canShowCallout = true
+            pinView.rightCalloutAccessoryView = rightButton
+           
+            return pinView
+
+        } else {
+            return nil
+        }
+    }
+    
+    
     // Couleurs+ personnalisatin
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
@@ -103,7 +127,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     
     func createIti(location:[CLLocationCoordinate2D]){
-        
         let trajet = MKPolyline(coordinates: location, count: location.count)
         mapView.addOverlay(trajet)
     }
