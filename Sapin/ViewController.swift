@@ -91,7 +91,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     // Test de l'annotation, pour pouvoir ensuite faire en sorte d'afficher quelque chose en cas de touch
-    
+    // Modifie juste la forme, possible de l'elenver
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is CustomAnnotation {
             let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: String(annotation.hash))
@@ -101,14 +101,34 @@ class ViewController: UIViewController, MKMapViewDelegate {
             
 
             pinView.animatesDrop = true
-            pinView.canShowCallout = true
-            pinView.rightCalloutAccessoryView = rightButton
+        
            
             return pinView
 
         } else {
             return nil
         }
+    }
+    
+    // Lorsqu'on touche une annotation
+    var selectedAnnotation: MKPointAnnotation?
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        self.selectedAnnotation = view.annotation as? MKPointAnnotation
+        //showAlert(title: "test", message: self.selectedAnnotation!.title!)
+        
+        let secondViewController = SecondViewController()
+        //secondViewController.arretId = self.selectedAnnotation!.title!
+        secondViewController.delegate = self
+        navigationController?.pushViewController(secondViewController, animated: true)
+    }
+    
+    
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message,preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     
