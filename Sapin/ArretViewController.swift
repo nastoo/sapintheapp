@@ -13,11 +13,21 @@ class ArretViewController: UIViewController {
 
     weak var delegate:ViewController!
     var arretId:String = ""
+    
+    // Quel arrêt ?
     @IBOutlet var textArretId:UITextView?
+    
+    // Boutons
+    @IBOutlet var buttonOuManger:UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // On set le texte du haut en fonction du paramètre passé lors du push de la vue
         textArretId?.text = arretId
+        
+        // On set le bouton
+        buttonOuManger?.layer.cornerRadius = 20.0
 
         // Do any additional setup after loading the view.
     }

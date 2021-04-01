@@ -69,24 +69,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aV-nu-kaX">
-                                <rect key="frame" x="50" y="84" width="314" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="SDi-Ff-FUo"/>
-                                </constraints>
+                                <rect key="frame" x="50" y="136" width="314" height="51.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À proximité de " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj4-U1-mU5">
+                                <rect key="frame" x="50" y="113" width="126" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIX-NB-BRP">
+                                <rect key="frame" x="50" y="244" width="140" height="50"/>
+                                <color key="backgroundColor" red="0.70980392156862748" green="0.88627450980392153" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="T8o-8x-yX2"/>
+                                    <constraint firstAttribute="height" constant="50" id="gYq-Cq-Rak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Où manger ? ">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KPS-XH-XEo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Nj4-U1-mU5" firstAttribute="top" secondItem="KPS-XH-XEo" secondAttribute="top" constant="69" id="19g-lN-FIr"/>
+                            <constraint firstItem="LIX-NB-BRP" firstAttribute="leading" secondItem="KPS-XH-XEo" secondAttribute="leading" constant="50" id="4ya-mB-vkH"/>
                             <constraint firstItem="KPS-XH-XEo" firstAttribute="trailing" secondItem="8aV-nu-kaX" secondAttribute="trailing" constant="50" id="5Id-bZ-jz8"/>
+                            <constraint firstItem="Nj4-U1-mU5" firstAttribute="leading" secondItem="KPS-XH-XEo" secondAttribute="leading" constant="50" id="6QS-KO-vFl"/>
                             <constraint firstItem="8aV-nu-kaX" firstAttribute="leading" secondItem="KPS-XH-XEo" secondAttribute="leading" constant="50" id="CGa-KY-5U3"/>
-                            <constraint firstItem="8aV-nu-kaX" firstAttribute="top" secondItem="KPS-XH-XEo" secondAttribute="top" constant="40" id="xFp-PQ-LqF"/>
+                            <constraint firstItem="LIX-NB-BRP" firstAttribute="top" secondItem="8aV-nu-kaX" secondAttribute="bottom" constant="56.5" id="m1o-1A-LFw"/>
+                            <constraint firstItem="8aV-nu-kaX" firstAttribute="top" secondItem="Nj4-U1-mU5" secondAttribute="bottom" id="mcz-zb-bHO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonOuManger" destination="LIX-NB-BRP" id="nLE-Tl-GEi"/>
                         <outlet property="textArretId" destination="8aV-nu-kaX" id="c8Y-5s-eJL"/>
                     </connections>
                 </viewController>
@@ -102,6 +122,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
