@@ -19,7 +19,7 @@
 		749F7E3425D56CBA003EFCFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749F7E3225D56CBA003EFCFA /* LaunchScreen.storyboard */; };
 		749F7E3F25D56CBA003EFCFA /* SapinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749F7E3E25D56CBA003EFCFA /* SapinTests.swift */; };
 		749F7E4A25D56CBA003EFCFA /* SapinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749F7E4925D56CBA003EFCFA /* SapinUITests.swift */; };
-		C449E028261509B5001CC605 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E027261509B5001CC605 /* SecondViewController.swift */; };
+		C4288E7C2615AA3C00237B6A /* ArretViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4288E7B2615AA3C00237B6A /* ArretViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		749F7E4525D56CBA003EFCFA /* SapinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SapinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		749F7E4925D56CBA003EFCFA /* SapinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SapinUITests.swift; sourceTree = "<group>"; };
 		749F7E4B25D56CBA003EFCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C449E027261509B5001CC605 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C4288E7B2615AA3C00237B6A /* ArretViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				749F7E2725D56CB8003EFCFA /* AppDelegate.swift */,
 				749F7E2925D56CB8003EFCFA /* SceneDelegate.swift */,
 				749F7E2B25D56CB8003EFCFA /* ViewController.swift */,
-				C449E027261509B5001CC605 /* SecondViewController.swift */,
+				C4288E7B2615AA3C00237B6A /* ArretViewController.swift */,
 				749F7E2D25D56CB8003EFCFA /* Main.storyboard */,
 				749F7E3025D56CBA003EFCFA /* Assets.xcassets */,
 				749F7E3225D56CBA003EFCFA /* LaunchScreen.storyboard */,
@@ -276,10 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7414A4C325E50B8C00443C3D /* Model.swift in Sources */,
+				C4288E7C2615AA3C00237B6A /* ArretViewController.swift in Sources */,
 				749F7E2C25D56CB8003EFCFA /* ViewController.swift in Sources */,
 				749F7E2825D56CB8003EFCFA /* AppDelegate.swift in Sources */,
 				749F7E2A25D56CB8003EFCFA /* SceneDelegate.swift in Sources */,
-				C449E028261509B5001CC605 /* SecondViewController.swift in Sources */,
 				099D080825EF727900B6E8BD /* API.swift in Sources */,
 				74935A9425F7877F00876326 /* CustomAnnotation.swift in Sources */,
 			);

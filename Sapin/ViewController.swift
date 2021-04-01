@@ -115,20 +115,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         self.selectedAnnotation = view.annotation as? MKPointAnnotation
-        //showAlert(title: "test", message: self.selectedAnnotation!.title!)
         
-        let secondViewController = SecondViewController()
-        //secondViewController.arretId = self.selectedAnnotation!.title!
-        secondViewController.delegate = self
-        navigationController?.pushViewController(secondViewController, animated: true)
-    }
-    
-    
-    func showAlert(title: String, message: String){
-        let alert = UIAlertController(title: title, message: message,preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
+        // On push ArretViewController
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ArretViewController") as! ArretViewController
+        nextViewController.arretId = self.selectedAnnotation!.title!
+        self.present(nextViewController, animated:true, completion:nil)
+        
+        
     }
     
     

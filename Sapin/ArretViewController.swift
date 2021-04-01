@@ -1,20 +1,23 @@
 //
-//  SecondViewController.swift
+//  ArretViewController.swift
 //  Sapin
 //
-//  Created by Nathan Stooss on 31/03/2021.
+//  Created by Nathan Stooss on 01/04/2021.
 //  Copyright © 2021 Jael Beining. All rights reserved.
 //
 
 import UIKit
+import MapKit
 
-class SecondViewController: UIViewController {
-    
-   // @IBOutlet var arretId:String! = ""
-    weak var delegate: ViewController!
+class ArretViewController: UIViewController {
+
+    weak var delegate:ViewController!
+    var arretId:String = ""
+    @IBOutlet var textArretId:UITextView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textArretId?.text = arretId
 
         // Do any additional setup after loading the view.
     }
