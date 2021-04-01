@@ -19,6 +19,9 @@ class ArretViewController: UIViewController {
     
     // Boutons
     @IBOutlet var buttonOuManger:UIButton?
+    @IBOutlet var buttonOuBoire:UIButton?
+    @IBOutlet var buttonOuVoirUnFilm:UIButton?
+    @IBOutlet var buttonToutVoir:UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +29,11 @@ class ArretViewController: UIViewController {
         // On set le texte du haut en fonction du paramètre passé lors du push de la vue
         textArretId?.text = arretId
         
-        // On set le bouton
+        // On set les boutons
         buttonOuManger?.layer.cornerRadius = 20.0
-
+        buttonOuBoire?.layer.cornerRadius = 20.0
+        buttonOuVoirUnFilm?.layer.cornerRadius = 20.0
+        buttonToutVoir?.layer.cornerRadius = 20.0
         // Do any additional setup after loading the view.
     }
     

@@ -81,15 +81,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIX-NB-BRP">
-                                <rect key="frame" x="50" y="244" width="140" height="50"/>
+                                <rect key="frame" x="50" y="244" width="130" height="50"/>
                                 <color key="backgroundColor" red="0.70980392156862748" green="0.88627450980392153" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="T8o-8x-yX2"/>
+                                    <constraint firstAttribute="width" constant="130" id="T8o-8x-yX2"/>
                                     <constraint firstAttribute="height" constant="50" id="gYq-Cq-Rak"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Où manger ? ">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHP-hv-AVn">
+                                <rect key="frame" x="50" y="314" width="130" height="50"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.8862745098" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hi0-9D-wjQ"/>
+                                    <constraint firstAttribute="width" constant="130" id="gnK-2e-eoh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Où voir un film ? ">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szR-ZX-dZN">
+                                <rect key="frame" x="234" y="244" width="130" height="50"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.8862745098" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="26Z-aM-wLz"/>
+                                    <constraint firstAttribute="height" constant="50" id="kar-j6-jmS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Où boire ? ">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mim-S2-s1H">
+                                <rect key="frame" x="234" y="314" width="130" height="50"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.8862745098" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8DK-RT-6FR"/>
+                                    <constraint firstAttribute="width" constant="130" id="Mmr-NR-h4w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Tout voir">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
@@ -97,16 +133,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Nj4-U1-mU5" firstAttribute="top" secondItem="KPS-XH-XEo" secondAttribute="top" constant="69" id="19g-lN-FIr"/>
+                            <constraint firstItem="szR-ZX-dZN" firstAttribute="top" secondItem="8aV-nu-kaX" secondAttribute="bottom" constant="56.5" id="3Em-cz-Xp8"/>
                             <constraint firstItem="LIX-NB-BRP" firstAttribute="leading" secondItem="KPS-XH-XEo" secondAttribute="leading" constant="50" id="4ya-mB-vkH"/>
                             <constraint firstItem="KPS-XH-XEo" firstAttribute="trailing" secondItem="8aV-nu-kaX" secondAttribute="trailing" constant="50" id="5Id-bZ-jz8"/>
                             <constraint firstItem="Nj4-U1-mU5" firstAttribute="leading" secondItem="KPS-XH-XEo" secondAttribute="leading" constant="50" id="6QS-KO-vFl"/>
                             <constraint firstItem="8aV-nu-kaX" firstAttribute="leading" secondItem="KPS-XH-XEo" secondAttribute="leading" constant="50" id="CGa-KY-5U3"/>
+                            <constraint firstItem="KPS-XH-XEo" firstAttribute="trailing" secondItem="szR-ZX-dZN" secondAttribute="trailing" constant="50" id="RvN-N7-Uf8"/>
+                            <constraint firstItem="KPS-XH-XEo" firstAttribute="trailing" secondItem="mim-S2-s1H" secondAttribute="trailing" constant="50" id="SyW-Lb-Mhu"/>
+                            <constraint firstItem="MHP-hv-AVn" firstAttribute="top" secondItem="LIX-NB-BRP" secondAttribute="bottom" constant="20" id="TTR-8E-Fnd"/>
+                            <constraint firstItem="mim-S2-s1H" firstAttribute="top" secondItem="szR-ZX-dZN" secondAttribute="bottom" constant="20" id="UkM-ha-mYD"/>
+                            <constraint firstItem="MHP-hv-AVn" firstAttribute="leading" secondItem="KPS-XH-XEo" secondAttribute="leading" constant="50" id="iiA-pS-8Kd"/>
                             <constraint firstItem="LIX-NB-BRP" firstAttribute="top" secondItem="8aV-nu-kaX" secondAttribute="bottom" constant="56.5" id="m1o-1A-LFw"/>
                             <constraint firstItem="8aV-nu-kaX" firstAttribute="top" secondItem="Nj4-U1-mU5" secondAttribute="bottom" id="mcz-zb-bHO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonOuBoire" destination="szR-ZX-dZN" id="mwP-et-zN6"/>
                         <outlet property="buttonOuManger" destination="LIX-NB-BRP" id="nLE-Tl-GEi"/>
+                        <outlet property="buttonOuVoirUnFilm" destination="MHP-hv-AVn" id="k0l-m4-Ub5"/>
+                        <outlet property="buttonToutVoir" destination="mim-S2-s1H" id="1gp-ZR-GgP"/>
                         <outlet property="textArretId" destination="8aV-nu-kaX" id="c8Y-5s-eJL"/>
                     </connections>
                 </viewController>
