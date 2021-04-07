@@ -63,8 +63,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         })
     }
     func filterAndRefreshMap (name:[String?], value:[Feature_2]) {
-        //print(name)
-        //print(value)
+      
         var iteration:Int = 0
         name.forEach { row in
             

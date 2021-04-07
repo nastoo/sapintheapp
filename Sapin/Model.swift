@@ -9,6 +9,25 @@
 import Foundation
 import MapKit
 
+// 3eme API (geoapify)
+public class PlaceContainer:Decodable {
+    var features: [PlacesProperties]!
+}
+
+public class PlacesProperties:Decodable {
+    var properties: [PlacesDetails]!
+}
+
+public class PlacesDetails:Decodable {
+    var name:String!
+    var housenumber:String!
+    var street:String!
+    var city:String!
+    var distance:Int
+
+}
+
+
 //2nd api
 public class ArretContainer:Decodable {
     var features: [Feature_2]!

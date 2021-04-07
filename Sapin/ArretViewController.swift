@@ -9,10 +9,12 @@
 import UIKit
 import MapKit
 
-class ArretViewController: UIViewController {
+class ArretViewController: UIViewController, UITableViewDataSource {
 
     weak var delegate:ViewController!
     var arretId:String = ""
+    
+    var api = API()
     
     // Quel arrêt ?
     @IBOutlet var textArretId:UITextView?
@@ -22,6 +24,15 @@ class ArretViewController: UIViewController {
     @IBOutlet var buttonOuBoire:UIButton?
     @IBOutlet var buttonOuVoirUnFilm:UIButton?
     @IBOutlet var buttonToutVoir:UIButton?
+    @IBOutlet var tableView:UITableView?
+    
+    
+    // Charge la table view
+    @IBAction func loadTableViewManger() {
+        tableView?.isHidden = false
+    }
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +45,41 @@ class ArretViewController: UIViewController {
         buttonOuBoire?.layer.cornerRadius = 20.0
         buttonOuVoirUnFilm?.layer.cornerRadius = 20.0
         buttonToutVoir?.layer.cornerRadius = 20.0
-        // Do any additional setup after loading the view.
+    
+        
+        // Appel de l'API places
+        
+        api.getPlaces(completion: { places in
+            var details: [PlacesDetails]?
+            details = places!.features[0].properties
+            DispatchQueue.main.async {
+                print(details)
+            }
+            
+        })
+        
+        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView?.dataSource = self
+        tableView?.isHidden = true
+
+
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.tableViewData.count
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell",
+                                                 for: indexPath)
+        cell.textLabel?.text = self.tableViewData[indexPath.row]
+        return cell
+    }
+    
+    var tableViewData = ["Lorem ipsum", "Dolor", "Sint Ament", "Lor"]
+    
+    
+    
     /*
     // MARK: - Navigation
 
