@@ -80,10 +80,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
         buttonToutVoir?.layer.cornerRadius = 20.0
         
         
-        // Appel de l'API places
-        //displayPlacesCallingApi()
-        
-        
+        // On set la table view
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         tableView?.dataSource = self
         tableView?.isHidden = true
@@ -101,7 +98,6 @@ class ArretViewController: UIViewController, UITableViewDataSource {
             } else {
                 tailleTableau = 0;
             }
-            print(tailleTableau)
             if(tailleTableau > 1) {
                 for i in 0...tailleTableau-1 {
                     details = places!.features[i].properties

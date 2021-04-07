@@ -84,7 +84,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
             mapView.addAnnotation(annotation)
             
             iteration = iteration + 1
-            print(arretSolo)
         }
     
     }
