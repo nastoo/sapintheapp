@@ -14,6 +14,8 @@ class ArretViewController: UIViewController, UITableViewDataSource {
     weak var delegate:ViewController!
     var arretId:String = ""
     
+    var tableViewData: [String] = [""]
+
     var api = API()
     
     // Quel arrêt ?
@@ -50,13 +52,21 @@ class ArretViewController: UIViewController, UITableViewDataSource {
         // Appel de l'API places
         
         api.getPlaces(completion: { places in
-            var details: [PlacesDetails]?
-            details = places!.features[0].properties
+            var details: PlacesDetails?
+            for i in 0...4 {
+                details = places!.features[i].properties
+                self.tableViewData.append(details!.name)
+            }
+            print(self.tableViewData)
             DispatchQueue.main.async {
-                print(details)
+                self.tableView!.reloadData()
             }
             
-        })
+            
+            
+            
+        }, longitude: 41.1, latitude: 5.5)
+        
         
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         tableView?.dataSource = self
@@ -64,7 +74,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
 
 
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tableViewData.count
     }
@@ -76,7 +86,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    var tableViewData = ["Lorem ipsum", "Dolor", "Sint Ament", "Lor"]
+    
     
     
     

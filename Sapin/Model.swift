@@ -15,7 +15,7 @@ public class PlaceContainer:Decodable {
 }
 
 public class PlacesProperties:Decodable {
-    var properties: [PlacesDetails]!
+    var properties: PlacesDetails!
 }
 
 public class PlacesDetails:Decodable {

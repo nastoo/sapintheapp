@@ -64,9 +64,9 @@ class API {
         session.resume()
     }
     
-    public func getPlaces(completion: @escaping (PlaceContainer?) -> Void){
+    public func getPlaces(completion: @escaping (PlaceContainer?) -> Void, longitude:Double, latitude:Double){
         
-        let url = URL(string: "https://api.geoapify.com/v2/places?categories=catering.restaurant,catering.pub,entertainment.cinema&filter=circle:5.7357819,45.1875602,1000&bias=proximity:5.7357819,45.1875602&limit=20&apiKey=1437be8c44fc48a1b225db9cc6044139")
+        let url = URL(string: "https://api.geoapify.com/v2/places?categories=catering.restaurant,catering.pub,entertainment.cinema&filter=circle:5.7357819,45.1875602,1000&bias=proximity:5.7357819,45.1875602&limit=5&apiKey=1437be8c44fc48a1b225db9cc6044139")
         
         let session = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {
