@@ -92,7 +92,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loadTableViewManger" destination="uO7-3K-GE0" eventType="touchDown" id="H9T-Ml-9Ho"/>
+                                    <action selector="loadTableViewSingleManger" destination="uO7-3K-GE0" eventType="touchDown" id="0WN-DD-QXj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHP-hv-AVn">
@@ -106,6 +106,9 @@
                                 <state key="normal" title="Où voir un film ? ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loadTableViewSingleVoir" destination="uO7-3K-GE0" eventType="touchDown" id="kdu-NP-Nwx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szR-ZX-dZN">
                                 <rect key="frame" x="234" y="244" width="130" height="50"/>
@@ -119,7 +122,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loadTableViewBoire" destination="uO7-3K-GE0" eventType="touchDown" id="KFa-3M-tlM"/>
+                                    <action selector="loadTableViewSingleBoire" destination="uO7-3K-GE0" eventType="touchDown" id="Diu-7A-zHp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mim-S2-s1H">
@@ -133,6 +136,9 @@
                                 <state key="normal" title="Tout voir">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loadTableViewAll" destination="uO7-3K-GE0" eventType="touchDown" id="AD7-ns-EOQ"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tlu-HI-gX6">
                                 <rect key="frame" x="50" y="414" width="314" height="398"/>

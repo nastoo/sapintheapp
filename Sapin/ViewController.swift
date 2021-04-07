@@ -119,6 +119,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ArretViewController") as! ArretViewController
         nextViewController.arretId = self.selectedAnnotation!.title!
+        nextViewController.arretLatitude = self.selectedAnnotation!.coordinate.latitude
+        nextViewController.arretLongitude = self.selectedAnnotation!.coordinate.longitude
         self.present(nextViewController, animated:true, completion:nil)
         
         
