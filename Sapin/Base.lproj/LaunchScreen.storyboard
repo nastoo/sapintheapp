@@ -17,17 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LauchScreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-LD-i83">
-                                <rect key="frame" x="50" y="244" width="314" height="268"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sapin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-Zp-96M">
-                                <rect key="frame" x="130" y="497.5" width="155" height="39.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sapin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-Zp-96M">
+                                <rect key="frame" x="20" y="497.5" width="374" height="39.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous déplacer simplement !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-xH-2La">
-                                <rect key="frame" x="51" y="545" width="312" height="21"/>
+                                <rect key="frame" x="20" y="545" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,23 +35,26 @@
                                 <color key="textColor" systemColor="systemGray3Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LauchScreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-LD-i83">
+                                <rect key="frame" x="107" y="254" width="200" height="200"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2dq-LD-i83" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="0av-6P-cRm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RPz-xH-2La" secondAttribute="bottom" constant="296" id="4qu-PD-cri"/>
-                            <constraint firstItem="RPz-xH-2La" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="CR9-DD-0fk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RPz-xH-2La" secondAttribute="trailing" constant="51" id="Dui-OJ-uRB"/>
-                            <constraint firstItem="2dq-LD-i83" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="I2T-87-rNE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2dq-LD-i83" secondAttribute="trailing" constant="50" id="TC7-Ob-xdH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KZV-Zp-96M" secondAttribute="trailing" constant="129" id="XFo-5m-5jS"/>
+                            <constraint firstItem="RPz-xH-2La" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CR9-DD-0fk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RPz-xH-2La" secondAttribute="trailing" constant="20" id="Dui-OJ-uRB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2dq-LD-i83" secondAttribute="trailing" constant="107" id="OFh-tX-hng"/>
+                            <constraint firstItem="2dq-LD-i83" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="PNy-gj-tiM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KZV-Zp-96M" secondAttribute="trailing" constant="20" id="XFo-5m-5jS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KZV-Zp-96M" secondAttribute="bottom" constant="325" id="ZbD-eg-Qzr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2dq-LD-i83" secondAttribute="bottom" constant="350" id="af7-kX-oeV"/>
                             <constraint firstItem="6gU-Fy-dqO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="dl4-gr-CyU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6gU-Fy-dqO" secondAttribute="trailing" constant="100" id="gn8-cm-Gm8"/>
                             <constraint firstItem="6gU-Fy-dqO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="hWV-cH-dWh"/>
-                            <constraint firstItem="KZV-Zp-96M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="r4i-9j-k1Y"/>
+                            <constraint firstItem="KZV-Zp-96M" firstAttribute="top" secondItem="2dq-LD-i83" secondAttribute="bottom" constant="43.5" id="mVC-Sg-qbx"/>
+                            <constraint firstItem="KZV-Zp-96M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="r4i-9j-k1Y"/>
+                            <constraint firstItem="2dq-LD-i83" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="zp4-D8-GfG"/>
                         </constraints>
                     </view>
                 </viewController>
