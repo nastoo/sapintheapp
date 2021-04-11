@@ -17,6 +17,8 @@ We are working hard to resolve this problem
 Semitag doesn't give a full public access to its API. 
 We are unable to retrieve real time stop schedule :(
 
+### When there isn't any place near stop, app crashes
+
 ## About the project
 This is an application for iOS only. 
 Written in Swift
