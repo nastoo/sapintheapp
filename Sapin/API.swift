@@ -66,7 +66,7 @@ class API {
     
     public func getPlaces(completion: @escaping (PlaceContainer?) -> Void, latitude:Double, longitude:Double, kindOfPlace:String){
         
-        let url = URL(string: "https://api.geoapify.com/v2/places?categories=\(kindOfPlace)&filter=circle:\(longitude),\(latitude),1000&bias=proximity:\(longitude),\(latitude)&limit=5&apiKey=1437be8c44fc48a1b225db9cc6044139")
+        let url = URL(string: "https://api.geoapify.com/v2/places?categories=\(kindOfPlace)&filter=circle:\(longitude),\(latitude),2000&bias=proximity:\(longitude),\(latitude)&limit=5&apiKey=1437be8c44fc48a1b225db9cc6044139")
         
         let session = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {

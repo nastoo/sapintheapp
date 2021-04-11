@@ -93,6 +93,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
             self.tableViewData = []
             var details: PlacesDetails?
             var tailleTableau:Int = 0;
+            print(places!.features.count)
             if ((places!.features.count) != 0) {
                 tailleTableau = places!.features.count
             } else {
