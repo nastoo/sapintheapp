@@ -38,7 +38,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
         self.kindOfPlace = "catering.restaurant,catering.pub,entertainment.cinema"
         displayPlacesCallingApi()
         self.refreshTableView()
-
+        
     }
     
     @IBAction func loadTableViewSingleManger() {
@@ -46,7 +46,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
         self.kindOfPlace = "catering.restaurant"
         displayPlacesCallingApi()
         self.refreshTableView()
-
+        
     }
     
     @IBAction func loadTableViewSingleBoire() {
@@ -54,7 +54,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
         self.kindOfPlace = "catering.pub"
         displayPlacesCallingApi()
         self.refreshTableView()
-
+        
     }
     
     @IBAction func loadTableViewSingleVoir() {
@@ -62,7 +62,7 @@ class ArretViewController: UIViewController, UITableViewDataSource {
         displayPlacesCallingApi()
         self.kindOfPlace = "entertainment.cinema"
         self.refreshTableView()
-
+        
         
     }
     
@@ -93,22 +93,28 @@ class ArretViewController: UIViewController, UITableViewDataSource {
             self.tableViewData = []
             var details: PlacesDetails?
             var tailleTableau:Int = 0;
-            print(places!.features.count)
-            if ((places!.features.count) != 0) {
-                tailleTableau = places!.features.count
-            } else {
-                tailleTableau = 0;
-            }
-            if(tailleTableau > 1) {
-                for i in 0...tailleTableau-1 {
-                    details = places!.features[i].properties
-                    self.tableViewData.append(details!.name)
-                }
-            } else {
+            if (places!.features == nil ) {
                 self.tableViewData.append("Il n'y a rien à afficher...")
-            }
-            self.refreshTableView()
+                self.refreshTableView()
 
+            } else {
+                if ((places!.features.count) != 0) {
+                    tailleTableau = places!.features.count
+                } else {
+                    tailleTableau = 0;
+                }
+                if(tailleTableau > 1) {
+                    for i in 0...tailleTableau-1 {
+                        details = places!.features[i].properties
+                        self.tableViewData.append(details!.name)
+                    }
+                }
+                self.refreshTableView()
+
+            }
+
+          
+            
             
         }, latitude: self.arretLatitude, longitude: self.arretLongitude, kindOfPlace: self.kindOfPlace)
     }
